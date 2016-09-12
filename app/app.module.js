@@ -15,6 +15,7 @@ var navbar_component_1 = require('./navbar/navbar.component');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
 var login_component_1 = require('./login/login.component');
 var register_component_1 = require('./register/register.component');
+var create_playlist_component_1 = require('./create-playlist/create-playlist.component');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
@@ -22,7 +23,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, dashboard_component_1.DashboardComponent, login_component_1.LoginComponent, register_component_1.RegisterComponent],
+            declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, dashboard_component_1.DashboardComponent, login_component_1.LoginComponent, register_component_1.RegisterComponent, create_playlist_component_1.CreatePlaylistComponent],
             providers: [app_routing_1.appRoutingProviders],
             bootstrap: [app_component_1.AppComponent]
         }), 

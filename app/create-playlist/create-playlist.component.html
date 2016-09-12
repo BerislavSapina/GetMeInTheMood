@@ -1,0 +1,47 @@
+<div class="row" style="margin:0">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Create playlist</h1>
+                <hr />
+            </div>
+        </div> 
+        <div class="main-login main-center">
+            <div class="form-group">
+                <label for="playlist" class="cols-sm-2 control-label">Playlist Name</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="playlist" id="playlist"  placeholder="Enter playlist name" required/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="moods" class="cols-sm-2 control-label">Choose your mood</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <select id="moods">
+                            <option value="happy">Happy</option>
+                            <option value="sad">Sad</option>
+                            <option value="angry">Angry</option>
+                            <option value="chill">Chill</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="addSongs">
+                <div [hidden]="isAddSongHidden" id="addSong" class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Add song</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="name" id="name"  placeholder="Enter url" required/>
+                        </div>
+                    </div>
+                </div>
+                <a id="addSongLink" style="cursor:pointer;" (click)="displayAddSong()">Add song</a>
+            </div>
+            <div class="form-group ">
+                <button type="button" class="btn btn-primary btn-lg btn-block login-button">Add playlist</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,7 +12,8 @@ var core_1 = require('@angular/core');
 var NavbarComponent = (function () {
     function NavbarComponent() {
         this.title = "Get Me In The Mood";
-        this.logged = false;
+        this.logged = true;
+        this.username = "Bero";
     }
     NavbarComponent.prototype.ngOnInit = function () {
     };

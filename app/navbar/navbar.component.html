@@ -13,14 +13,14 @@
 <!-- Top Menu Items -->
 <ul *ngIf="logged" class="nav navbar-right top-nav">
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{username}} <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li>
                 <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
             </li>
             <li class="divider"></li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                <a [routerLink]="['/']"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
             </li>
         </ul>
     </li>
@@ -35,7 +35,7 @@
             <a [routerLink]="['/register']"><i class="fa fa-fw fa-dashboard"></i> Register</a>
         </li>
         <li *ngIf="logged">
-            <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Create Playlist</a>
+            <a [routerLink]="['/create-playlist']"><i class="fa fa-fw fa-dashboard"></i> Create Playlist</a>
         </li>
         <li *ngIf="logged">
             <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> View playlists</a>

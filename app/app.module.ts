@@ -5,13 +5,14 @@ import { NavbarComponent} from './navbar/navbar.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
 import { LoginComponent} from './login/login.component';
 import { RegisterComponent} from './register/register.component';
+import { CreatePlaylistComponent} from './create-playlist/create-playlist.component';
 
 import { routing,
          appRoutingProviders } from './app.routing';
 
 @NgModule({
   imports:      [ BrowserModule, routing ],
-  declarations: [ AppComponent,NavbarComponent, DashboardComponent, LoginComponent,RegisterComponent],
+  declarations: [ AppComponent,NavbarComponent, DashboardComponent, LoginComponent,RegisterComponent, CreatePlaylistComponent],
   providers: [ appRoutingProviders ],
   bootstrap:    [ AppComponent ]
 })
