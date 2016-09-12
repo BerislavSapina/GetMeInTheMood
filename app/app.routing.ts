@@ -6,7 +6,7 @@ import { LoginComponent} from './login/login.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: '', component: DashboardComponent }
 ];
 
 export const appRoutingProviders: any[] = [

@@ -4,7 +4,7 @@ var dashboard_component_1 = require('./dashboard/dashboard.component');
 var login_component_1 = require('./login/login.component');
 var appRoutes = [
     { path: 'login', component: login_component_1.LoginComponent },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent }
+    { path: '', component: dashboard_component_1.DashboardComponent }
 ];
 exports.appRoutingProviders = [];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);

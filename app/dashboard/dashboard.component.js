@@ -9,16 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
 var DashboardComponent = (function () {
-    function DashboardComponent() {
+    function DashboardComponent(domSanitizer) {
+        this.domSanitizer = domSanitizer;
+        this._youTubeSrc = "https://www.youtube.com/watch?v=bTTrX-CsFq8";
     }
     DashboardComponent.prototype.ngOnInit = function () { };
+    Object.defineProperty(DashboardComponent.prototype, "youTubeSrc", {
+        get: function () {
+            var url = this._youTubeSrc.replace("watch?v=", "v/");
+            return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
+        },
+        enumerable: true,
+        configurable: true
+    });
     DashboardComponent = __decorate([
         core_1.Component({
             selector: 'dashboard',
             templateUrl: 'app/dashboard/dashboard.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [platform_browser_1.DomSanitizer])
     ], DashboardComponent);
     return DashboardComponent;
 }());

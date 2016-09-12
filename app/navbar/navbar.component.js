@@ -12,9 +12,9 @@ var core_1 = require('@angular/core');
 var NavbarComponent = (function () {
     function NavbarComponent() {
         this.title = "Get Me In The Mood";
+        this.logged = true;
     }
     NavbarComponent.prototype.ngOnInit = function () {
-        $(".button-collapse").sideNav();
     };
     NavbarComponent = __decorate([
         core_1.Component({

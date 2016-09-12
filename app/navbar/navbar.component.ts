@@ -9,9 +9,10 @@ declare var $ : any ;
 })
 export class NavbarComponent implements OnInit {
     public title : string = "Get Me In The Mood";
+    public logged : boolean = true;
     constructor() { }
 
     ngOnInit() { 
-          $(".button-collapse").sideNav();
+        
     }
 }
