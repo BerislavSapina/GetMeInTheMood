@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var NavbarComponent = (function () {
     function NavbarComponent() {
         this.title = "Get Me In The Mood";
-        this.logged = true;
+        this.logged = false;
     }
     NavbarComponent.prototype.ngOnInit = function () {
     };
