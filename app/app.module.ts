@@ -4,13 +4,14 @@ import { AppComponent }   from './app.component';
 import { NavbarComponent} from './navbar/navbar.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
 import { LoginComponent} from './login/login.component';
+import { RegisterComponent} from './register/register.component';
 
 import { routing,
          appRoutingProviders } from './app.routing';
 
 @NgModule({
   imports:      [ BrowserModule, routing ],
-  declarations: [ AppComponent,NavbarComponent, DashboardComponent, LoginComponent],
+  declarations: [ AppComponent,NavbarComponent, DashboardComponent, LoginComponent,RegisterComponent],
   providers: [ appRoutingProviders ],
   bootstrap:    [ AppComponent ]
 })
