@@ -9,23 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var NavbarComponent = (function () {
-    function NavbarComponent() {
-        this.title = "Get Me In The Mood";
-        this.logged = false;
-        this.username = "Bero";
+var LocalStorageService = (function () {
+    function LocalStorageService(window) {
+        this.window = window;
     }
-    NavbarComponent.prototype.ngOnInit = function () {
+    LocalStorageService.prototype.getToken = function () {
+        return this.window.localStorage.getItem('auth_token');
     };
-    NavbarComponent = __decorate([
-        core_1.Component({
-            selector: 'navbar',
-            templateUrl: 'app/navbar/navbar.component.html',
-            styleUrls: ['app/navbar/navbar.component.css']
-        }), 
-        __metadata('design:paramtypes', [])
-    ], NavbarComponent);
-    return NavbarComponent;
+    LocalStorageService.prototype.setToken = function (token) {
+        this.window.localStorage.setItem('auth_token', token);
+    };
+    LocalStorageService.prototype.removeToken = function (token) {
+        this.window.localStorage.removeItem('auth_token');
+    };
+    LocalStorageService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [Window])
+    ], LocalStorageService);
+    return LocalStorageService;
 }());
-exports.NavbarComponent = NavbarComponent;
-//# sourceMappingURL=navbar.component.js.map
+exports.LocalStorageService = LocalStorageService;
+//# sourceMappingURL=localstorage-service.js.map

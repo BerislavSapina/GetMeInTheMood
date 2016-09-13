@@ -16,15 +16,17 @@ var dashboard_component_1 = require('./dashboard/dashboard.component');
 var login_component_1 = require('./login/login.component');
 var register_component_1 = require('./register/register.component');
 var create_playlist_component_1 = require('./create-playlist/create-playlist.component');
+var http_1 = require('@angular/http');
+var localstorage_service_1 = require('./localstorage-service');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule],
             declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, dashboard_component_1.DashboardComponent, login_component_1.LoginComponent, register_component_1.RegisterComponent, create_playlist_component_1.CreatePlaylistComponent],
-            providers: [app_routing_1.appRoutingProviders],
+            providers: [app_routing_1.appRoutingProviders, , localstorage_service_1.LocalStorageService, Window],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -9,7 +9,7 @@ declare var $ : any ;
 })
 export class NavbarComponent implements OnInit {
     public title : string = "Get Me In The Mood";
-    public logged : boolean = true;
+    public logged : boolean = false;
     public username: string = "Bero"
     constructor() { }
 
